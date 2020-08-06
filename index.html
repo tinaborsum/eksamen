@@ -9,21 +9,62 @@
     <link rel="stylesheet" href="diamonds.css">
 </head>
 <body>
+    
     <header>
-        <h1>Verdens 7 underverker</h1>
-        <nav></nav>
+            <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">Hjem</a>
+                    <a href="#">Quiz</a>
+                    <a href="#">Kart</a>
+                  </div>
+                  
+                  <button class="openbtn" onclick="openNav()">&#9776;</button>
     </header>
+    <main>
     <div class="diamond-grid"> 
-        <div class="item"><img src="./photos/Great-Wall.jpg" alt=""></div>
-        <div class="item"><img src="./photos/petra.jpg" alt=""></div>
-        <div class="item"><img src="./photos/colosseum.jpg" alt=""></div>
-        <div class="item"><img src="./photos/machu-picchu.jpeg" alt=""></div>
-        <div class="item"><img src="./photos/christ-the-redeemer.jpg" alt=""></div>
-        <div class="item"><img src="./photos/taj-mahal.jpg" alt=""></div>
-        <div class="item"><img src="./photos/chichen-itza.jpeg" alt=""></div>
-        <div class="item"><img src="./photos/world-map.jpg" alt=""></div>
+        <div class="item"><img src="./photos/great-wall-2.jpeg" alt="">
+        <div class="content">
+            <div class="text">Den kinesiske mur</div>
+        </div>
+    </div>
+        <div class="item"><img src="./photos/petra-3.jpg" alt="">
+            <div class="content">
+                    <div class="text">Petra</div>
+                </div>
+            </div>
+        <div class="item"><img src="./photos/colosseum.jpg" alt="">
+            <div class="content">
+                <div class="text">Colosseum</div>
+            </div>
+        </div>
+        <div class="item"><img src="./photos/machu-picchu.jpeg" alt="">
+            <div class="content">
+                    <div class="text">Macchu Picchu</div>
+                </div>
+            </div>
+        <div class="item"><img src="./photos/christ-3.jpg" alt="">
+            <div class="content">
+                    <div class="text">Kristusstatuen</div>
+                </div>
+            </div>
+        <div class="item"><img src="./photos/taj-mahal.jpg" alt="">
+            <div class="content">
+                    <div class="text">Taj Mahal</div>
+                </div>
+            </div>
+        <div class="item"><img src="./photos/chichen-itza.jpeg" alt="">
+            <div class="content">
+                    <div class="text">Chichen Itza</div>
+                </div>
+            </div>
+        <div class="item"><img src="./photos/world-map.jpg" alt="">
+            <div class="content">
+                    <div class="text">Kart</div>
+                </div>
+            </div>
     </div>
     </div>
+</main>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./jquery.diamonds.js"></script>
     <script type="text/javascript">
@@ -36,5 +77,6 @@ $(".diamond-grid").diamonds({
     itemSelector : ".item" // the css selector to use to select diamonds-items.
 });
     </script>
+    <script src="./index.js"></script>
 </body>
 </html>

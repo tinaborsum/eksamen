@@ -5,15 +5,70 @@ body {
 }
 
 header {
-    background-color: white;
-    padding: 5px;
-    font-size: 10px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: sticky;
+    background-color: aliceblue;
 }
 
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right:0;
+    background-color:rgb(31, 31, 31); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color:rgb(150, 134, 134);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    
+  }
+  
+  .openbtn:hover {
+    background-color:greenyellow;
+  }
 
+ 
 .diamond-grid {
     width: 70%;
-    margin: 150px auto 0;
+    margin: 10px auto 0;
 }
 
 .item {
@@ -23,6 +78,7 @@ header {
     transition: 0.5s;
     opacity: 0.5;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .item:hover{
@@ -41,4 +97,32 @@ header {
         width: 100%;
         margin: 0 auto;
     }
+}
+
+.content {
+    opacity: 0;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    
+    width: 300px;
+    height: 300px;
+    transition: all 400ms ease-out;
+}
+
+.item .content:hover {
+    opacity: 1;
+}
+.item .content .text{
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+.item .content:hover .text {
+    opacity: 1;
+    transform: translateY(130px);
 }
