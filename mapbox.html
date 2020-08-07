@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Map</title>
+    <title>Kart</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./map.css">
     <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-
+    <header>
+        <div id="headline">Verdens syv underverker</div>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Hjem</a>
+            <a href="./quiz.html">Quiz</a>
+            <a href="./mapbox.html">Kart</a>
+        </div>
+                      
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </header>
+        <main>
+                <nav id="nav">
+                    <article data-lng="-88.568563" data-lat="20.682985">Chichen Itza
+                    </article>
+                    <article data-lng="12.492259" data-lat="41.890386">Colosseum
+                    </article>
+                    <article href="" data-lng="116.570374" data-lat="40.431908">Den kinesiske mur
+                    </article>
+                    <article data-lng="-43.210450" data-lat="-22.951880">Kristusstatuen
+                    </article>
+                    <article data-lng="-72.544985" data-lat="-13.162889">Macchu Picchu
+                    </article>
+                    <article data-lng="35.444504" data-lat="30.329917">Petra</article>
+                    <article data-lng="78.042167" data-lat="27.175145">Taj Mahal </article>
+                </nav>
+        <div id="kartet"></div>
+            </main>
+        
+         <script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+    <script src="./index.js"></script>
+<script src="./mapbox.js"></script>
 </body>
 </html>

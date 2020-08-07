@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+                <div id="headline">Verdens syv underverker</div>
+                <div id="mySidepanel" class="sidepanel">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="./index.html">Hjem</a>
+                        <a href="./quiz.html">Quiz</a>
+                        <a href="./mapbox.html">Kart</a>
+                      </div>
+                      
+                      <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </header>
+
+        <div class="grid">
+                <div id="quiz">
+                    <h1>Quiz</h1>
+                    <hr style="margin-bottom: 20px">
+         
+                    <p id="question"></p>
+         
+                    <div class="buttons">
+                        <button id="btn0"><span id="choice0"></span></button>
+                        <button id="btn1"><span id="choice1"></span></button>
+                        <button id="btn2"><span id="choice2"></span></button>
+                        <button id="btn3"><span id="choice3"></span></button>
+                    </div>
+         
+                    <hr style="margin-top: 50px">
+                    <footer>
+                        <p id="progress">Spørsmål x av y</p>
+                    </footer>
+                </div>
+            </div>
+        <script src="./quiz.js"></script>
+        <script src="./index.js"></script>
+</body>
+</html>

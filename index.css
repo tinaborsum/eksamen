@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: black;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 header {
@@ -9,24 +10,46 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     position: sticky;
-    background-color: aliceblue;
+    background-color: black;
 }
 
-/* The sidepanel menu */
+#headline h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 4px;
+    padding-right: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    animation: typing 5s steps(40,end) 2s 1, blinking-cursor .5s step-end 30;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blinking-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+    
+  }
+
+
 .sidepanel {
-    height: 250px; /* Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    height: 250px; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
     top: 0;
     right:0;
-    background-color:rgb(31, 31, 31); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    background-color:black; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
   }
   
-  /* The sidepanel links */
+  
   .sidepanel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -36,12 +59,12 @@ header {
     transition: 0.3s;
   }
   
-  /* When you mouse over the navigation links, change their color */
+  
   .sidepanel a:hover {
-    color: #f1f1f1;
+    color: #d0c9c9;
   }
   
-  /* Position and style the close button (top right corner) */
+  
   .sidepanel .closebtn {
     position: absolute;
     top: 0;
@@ -50,11 +73,11 @@ header {
     margin-left: 50px;
   }
   
-  /* Style the button that is used to open the sidepanel */
+  
   .openbtn {
     font-size: 30px;
     cursor: pointer;
-    background-color:rgb(150, 134, 134);
+    background-color:black;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -62,7 +85,7 @@ header {
   }
   
   .openbtn:hover {
-    background-color:greenyellow;
+    color:rgb(255, 189, 47);
   }
 
  
@@ -78,7 +101,7 @@ header {
     transition: 0.5s;
     opacity: 0.5;
     transition: 0.5s;
-    cursor: pointer;
+    
 }
 
 .item:hover{
@@ -101,7 +124,7 @@ header {
 
 .content {
     opacity: 0;
-    font-size: 30px;
+    font-size: 40px;
     position: absolute;
     top: 0;
     left: 0;
@@ -124,5 +147,11 @@ header {
 
 .item .content:hover .text {
     opacity: 1;
-    transform: translateY(130px);
+    transform: translateY(120px);
+}
+
+#kartlink {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
